@@ -1,0 +1,737 @@
+c<html>
+<lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>OTT PLATFORM</title>
+
+    </head>
+
+    <body onload="AddCarouselButtons(); CheckSizeAttributes(); AddCards(); MakeJumbotron(); CheckCards(); ResizeHeader();" onscroll="ScrollFunction();" onresize="CheckSizeAttributes(); CheckCards(); MakeJumbotron(); ResizeHeader();">
+        <link rel="stylesheet" href="style.css">
+        <div class="content">
+            <div class="header">
+                <div class="brand">
+                    <h1 class="red">CHILL</h1>
+                    <h1 class="white">TRILL</h1>
+                </div>
+                <div class="main-nav">
+                    <a href="" class="button-container">
+                        <h2>HOME</h2>
+                    </a>
+                    <a onclick="SmoothScroll('movies');" class="button-container">
+                        <h2>MOVIES</h2>
+                    </a>
+                    <a onclick="SmoothScroll('trending');" class="button-container">
+                        <h2>TRENDING</h2>
+                    </a>
+                    <a onclick="SmoothScroll('releases');" class="button-container">
+                        <h2>RELEASES</h2>
+                    </a>
+                    <a onclick="SmoothScroll('search');" class="button-container">
+                        <h2>SEARCH</h2>
+                    </a>
+                </div>
+                <div class="right-nav">
+                    <div class="button-container login">
+                        <h2>Log In</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top">
+                <div class="image-container">
+                    <div class="left-side">
+                        <h1>Interstellar</h1>
+                        <p>Follow a group of astronauts from the future through the cosmos in search of an earthly replacement, what will happen next?</p>
+                        <div class="button-section">
+                            <div class="watch">
+                                <h3>Play</h3>
+                                <svg fill="currentColor" viewBox="0 0 16 16">
+                                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                  <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                              </svg>
+                            </div>
+                            <div class="queue" onclick="ToggleWatchLater('Interstellar');">
+                                <h3>Watch Later</h3>
+                                <svg fill="currentColor" viewBox="0 0 16 16">
+                                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                              </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid">
+                <div class="content-area" id="trending">
+                    <h2 class="content-title">TRENDING</h2>
+                    <div class="card-carousel">
+
+                    </div>
+                </div>
+                <div class="content-area" id="releases">
+                    <h2 class="content-title">NEW RELEASES</h2>
+                    <div class="card-carousel">
+
+                    </div>
+                </div>
+                <div class="search-area" id="search">
+                    <div class="search-area-content">
+                        <h2>Can't Find Anything You Like?</h2>
+                        <p>Search for thousands of unique movies from our growing database...</p>
+                        <div class="input-area">
+                            <input type="text" placeholder="Search..." />
+                            <svg fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                          </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-area" id="movies">
+                    <h2 class="content-title">ACTION</h2>
+                    <div class="card-carousel">
+
+                    </div>
+                </div>
+                <div class="content-area">
+                    <h2 class="content-title">DRAMA</h2>
+                    <div class="card-carousel">
+
+                    </div>
+                </div>
+                <div class="content-area">
+                    <h2 class="content-title">THRILLER</h2>
+                    <div class="card-carousel">
+
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="btn-row">
+                    <h1>Help Center</h1>
+                    <h1>Private Policy</h1>
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="btn-row">
+                    <h1>Terms of Use</h1>
+                    <h1>Jobs</h1>
+                    <h1>Legal Notices</h1>
+                </div>
+                <div class="carousel-btn">
+                    <div class="brand">
+                        <h1 class="red">CHILL</h1>
+                        <h1 class="white">TRILL</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.youtube.com/@user-ob3pe4ty3b">
+                        <i class="fa fa-youtube" id="youtube"></i></a>
+                    <i class="fa fa-twitter" id="twitter"></i>
+                    <a href="https://instagram.com/firewatchofficial_?igshid=MzNlNGNkZWQ4Mg==">
+                        <i class="fa fa-instagram" id="instagram"></i>
+                    </a>
+
+                    <i class="fa fa-facebook-square" id="facebook"></i>
+                </div>
+                <div class="close-btn">
+                    <p>© 2021 Firewatch, Inc.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-later-modal">
+            <h3>Added
+                <a href="#" class="movie"></a> to your <a href="#" class="playlist">WATCH LATER</a> playlist!</h3>
+            <div class="side-buttons">
+                <svg fill="currentColor" viewBox="0 0 16 16" onclick="alert('Removed item from the Watch Later playlist'); ToggleWatchLater('', false);">
+                  <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
+                  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+              </svg>
+                <svg fill="currentColor" viewBox="0 0 16 16" onclick="ToggleWatchLater('', false);">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+
+            </div>
+        </div>
+        <script>
+            let num_cards_GLOBAL = 5;
+
+            let cards = [{
+                background: "data:image/jpeg;base64,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",
+                display_background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRoEuBmsMCxNb0Uv5loP7slCLykj7-S-auyg&usqp=CAU",
+                title: "Interstellar",
+                description: "Follow a group of astronauts from the future through the cosmos in search of an earthly replacement, what will happen next?"
+            }, {
+                background: "https://images.alphacoders.com/586/thumb-1920-586902.jpg",
+                display_background: "//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages2.alphacoders.com%2F845%2F84502.jpg&f=1&nofb=1",
+                title: "Inception",
+                description: "Inception centres on brooding “extractor” Dom Cobb (played by Leonardo DiCaprio)—a thief who invades targets' dreams through a chemical-induced shared dream state in order to steal valuable information."
+            }, {
+                background: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F41%2F1%2Fhj197K.jpg&f=1&nofb=1",
+                display_background: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages7.alphacoders.com%2F990%2F990610.jpg&f=1&nofb=1",
+                title: "Avengers: Endgame",
+                description: "Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers."
+            }, {
+                background: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.wallpapersden.com%2Fimage%2Fdownload%2Fjoker-2019-movie_66632_1920x1080.jpg&f=1&nofb=1",
+                display_background: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.wallpapersden.com%2Fimage%2Fdownload%2Fjoker-stair-dance_68124_1920x1080.jpg&f=1&nofb=1",
+                title: "Joker",
+                description: "It follows Arthur Fleck, a failed clown and aspiring stand-up comic whose descent into mental illness and nihilism inspires a violent countercultural revolution against the wealthy in a decaying Gotham City.!"
+            }, {
+                background: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.U2iFUz9mivZeH-h48O5wtwHaEK%26pid%3DApi&f=1",
+                title: "1917",
+                description: "As an infantry battalion assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap."
+            }, {
+                background: "https://www.cinejosh.com/newsimg/newsmainimg/tenet-film-review_b_0509200712.jpg",
+                title: "TENET",
+                description: "The film follows a former CIA agent who learns how to manipulate the flow of time to prevent an attack from the future that threatens to annihilate the present world. "
+            }, {
+                background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeJkH6nTEyQKYOGzpUHzWdHDFnNr0hItrU8w&usqp=CAU",
+                title: "Skyfall",
+                description: "In Istanbul, MI6 agents James Bond and Eve Moneypenny pursue mercenary Patrice, who has stolen a hard drive containing details of undercover agents."
+            }, {
+                background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlgxEiZAcQIqqCC6Q5r22ysu04YiwxBF-aTw&usqp=CAU",
+                title: "RRR",
+                description: "A fearless revolutionary and an officer in the British force, who once shared a deep bond, decide to join forces and chart out an inspirational path of freedom against the despotic rulers.!"
+            }, {
+                background: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FrPpxrz8o0svAPCLucjsEdMXoDfX.jpg&f=1&nofb=1",
+                title: "Venom",
+                description: " the poisonous secretion of an animal, produced by specialized glands that are often associated with spines, teeth, stings, or other piercing devices. "
+            }, {
+                background: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2F6%2F8%2F123320-lord-of-the-rings-background-1920x1080-picture.jpg&f=1&nofb=1",
+                title: "Lord of the Rings",
+                description: "The saga of a group of sometimes reluctant heroes who set forth to save their world from consummate evil. "
+            }];
+
+            let cast = [{
+                picture: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.scdn.co%2Fimage%2F338040ea81df8012c152cfa65a4c1b440a94a1bc&f=1&nofb=1",
+                square: 1000,
+                name: "Will Smith"
+            }, {
+                picture: "//external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsiskiyou.sou.edu%2Fwp-content%2Fuploads%2F2014%2F10%2FRobin.jpg&f=1&nofb=1",
+                square: 2000,
+                name: "Robin Williams"
+            }, {
+                picture: "//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byrdie.com%2Fthmb%2FaSjYcUqubm-ucpugLMuN8m-nvdU%3D%2F796x700%2Ffilters%3Ano_upscale()%3Amax_bytes(150000)%3Astrip_icc()%2Fcdn.cliqueinc.com__cache__posts__237400__jennifer-lawrence-hairstyles-237400-1506716140954-main.700x0c-af3f438528ea44f0aa9c3c1fe3ef8c64.jpg&f=1&nofb=1",
+                square: 700,
+                name: "Jennifer Lawrence"
+            }];
+
+            const IsMobile = () => {
+                let width =
+                    window.innerWidth ||
+                    document.documentElement.clientWidth ||
+                    document.getElementsByTagName("body")[0].clientWidth;
+
+                if (width <= 736) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+
+            const CheckSizeAttributes = () => {
+                let width =
+                    window.innerWidth ||
+                    document.documentElement.clientWidth ||
+                    document.getElementsByTagName("body")[0].clientWidth;
+
+                let carousels = document.getElementsByClassName("card-carousel");
+
+                let old_num_cards = num_cards_GLOBAL;
+                let new_num_cards;
+
+                if (width > 1501) {
+                    new_num_cards = 5;
+                } else if (width <= 1500 && width > 1100) {
+                    new_num_cards = 4;
+                } else if (width <= 1100 && width > 520) {
+                    new_num_cards = 3;
+                } else if (width <= 520) {
+                    new_num_cards = 2;
+                }
+
+                for (let i = 0; i < carousels.length; i++) {
+                    if (carousels[i].children.length > 2) {
+                        for (let j = 1; j < carousels[i].children.length - 1; j++) {
+                            carousels[i].children[j].style.display = "none";
+                        }
+                        for (let j = 1; j < new_num_cards + 1; j++) {
+                            carousels[i].children[j].style.display = "flex";
+                        }
+                    }
+                }
+
+                num_cards_GLOBAL = new_num_cards;
+            };
+
+            const ResizeHeader = () => {
+                let width =
+                    window.innerWidth ||
+                    document.documentElement.clientWidth ||
+                    document.getElementsByTagName("body")[0].clientWidth;
+
+                if (width <= 815) {
+                    if (document.getElementsByClassName("hamburger").length <= 0) {
+                        let header = document.getElementsByClassName("header")[0];
+                        let main_nav = header.getElementsByClassName("main-nav")[0];
+                        let right_nav = header.getElementsByClassName("right-nav")[0];
+
+                        let hamburger = document.createElement("div");
+                        hamburger.classList.add("hamburger");
+                        hamburger.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>`;
+                        main_nav.remove();
+                        right_nav.remove();
+
+                        let bottom_header = document.createElement("div");
+                        bottom_header.classList.add("header-bottom");
+                        bottom_header.append(main_nav, right_nav);
+                        bottom_header.style.display = "none";
+
+                        hamburger.addEventListener("click", function() {
+                            if (bottom_header.style.display == "none") {
+                                bottom_header.style.display = "flex";
+                                header.style.paddingBottom = "9px";
+                                header.style.paddingTop = "9px";
+                            } else {
+                                bottom_header.style.display = "none";
+                                header.style.paddingBottom = "0px";
+                                header.style.paddingTop = "0px";
+                            }
+                        });
+
+                        header.classList.add("header-change");
+
+                        let top_header = document.createElement("div");
+                        top_header.classList.add("header-top");
+                        top_header.append(header.children[0], hamburger);
+
+                        header.innerHTML = "";
+                        header.append(top_header, bottom_header);
+                    }
+                } else {
+                    if (document.getElementsByClassName("hamburger").length > 0) {
+                        let header = document.getElementsByClassName("header")[0];
+                        let main_nav = header.getElementsByClassName("main-nav")[0];
+                        let right_nav = header.getElementsByClassName("right-nav")[0];
+                        let brand = header.getElementsByClassName("brand")[0];
+
+                        header.classList.remove("header-change");
+                        header.children[0].remove();
+                        header.children[0].remove();
+                        header.append(brand, main_nav, right_nav);
+                    }
+                }
+            };
+
+            const AddCards = () => {
+                let carousel_width = document.getElementsByClassName("card-carousel")[0]
+                    .clientWidth;
+
+                let btn_width =
+                    document.getElementsByClassName("carousel-btn")[0].clientWidth +
+                    document.getElementsByClassName("carousel-btn")[1].clientWidth;
+
+                let num_cards = num_cards_GLOBAL;
+                let card_margin = 2;
+                let initial_width = 1920;
+                let initial_height = 1080;
+
+                let scale =
+                    (100 * ((carousel_width - btn_width) / num_cards - card_margin * 2)) /
+                    initial_width;
+
+                let content_titles = document.getElementsByClassName("content-title");
+
+                for (let i = 0; i < content_titles.length; i++) {
+                    content_titles[i].style.marginLeft = `${card_margin}px`;
+                }
+
+                let carousels = document.getElementsByClassName("card-carousel");
+                for (let i = 0; i < carousels.length; i++) {
+                    let not_chosen = [];
+
+                    for (let c = 0; c < cards.length; c++) {
+                        not_chosen.push(c);
+                    }
+
+                    for (let j = 0; j < cards.length; j++) {
+                        let chosen_index = Math.floor(Math.random() * not_chosen.length);
+
+                        let chosen_card = cards[not_chosen[chosen_index]];
+
+                        not_chosen.splice(chosen_index, 1);
+
+                        let card = document.createElement("div");
+                        card.classList.add("card");
+                        card.style.backgroundImage = `url(${chosen_card.background})`;
+
+                        //If image doesn't load
+                        card.style.backgroundColor = `#333`;
+
+                        card.style.width = initial_width * (scale / 100) + "px";
+                        card.style.height = initial_height * (scale / 100) + "px";
+                        card.style.margin = `0px ${card_margin}px`;
+                        card.style.minWidth = initial_width * (scale / 100) + "px";
+                        card.style.minHeight = initial_height * (scale / 100) + "px";
+
+                        let overlay = document.createElement("div");
+                        overlay.classList.add("overlay");
+
+                        let title = document.createElement("h4");
+                        title.innerText = chosen_card.title;
+                        let description = document.createElement("p");
+                        description.innerText = "1h 25m";
+
+                        let button_container = document.createElement("div");
+                        button_container.classList.add("button-container");
+
+                        let button1 = document.createElement("div");
+                        button1.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16">
+  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+</svg>`;
+                        button1.classList.add("watch");
+
+                        let button2 = document.createElement("div");
+                        button2.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16">
+  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+</svg>`;
+                        button2.classList.add("queue");
+
+                        button2.addEventListener("click", function() {
+                            ToggleWatchLater(`${chosen_card.title}`);
+                        });
+
+                        let button3 = document.createElement("div");
+                        button3.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>`;
+                        button3.classList.add("star");
+                        button3.classList.add("queue");
+
+                        button3.addEventListener("click", function() {
+                            if (button3.children[0].style.color != "rgb(255, 255, 87)") {
+                                button3.children[0].style.color = "rgb(255, 255, 87)";
+                            } else {
+                                button3.children[0].style.color = "white";
+                            }
+                        });
+
+                        let button4 = document.createElement("div");
+                        button4.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg>`;
+                        button4.classList.add("star");
+                        button4.classList.add("queue");
+
+                        button4.addEventListener("click", function() {
+                            if (document.getElementsByClassName("movie-desc").length > 0) {
+                                // If the modal exists
+                                document.getElementsByClassName("movie-desc")[0].remove();
+                            } else {
+                                let modal = document.createElement("div");
+                                modal.classList.add("movie-desc");
+
+                                let modal_content = document.createElement("div");
+                                modal_content.classList.add("modal-content");
+
+                                let bg_image = document.createElement("div");
+                                bg_image.classList.add("desc-image");
+                                bg_image.style.backgroundImage = `url(${chosen_card.background})`;
+                                let image_cover = document.createElement("div");
+
+                                let close_btn = document.createElement("div");
+                                close_btn.classList.add("close-btn");
+                                close_btn.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg>`;
+
+                                close_btn.addEventListener("click", function() {
+                                    this.parentElement.parentElement.parentElement.parentElement.remove();
+                                });
+
+                                image_cover.append(close_btn);
+                                bg_image.append(image_cover);
+
+                                let top_info = document.createElement("div");
+                                top_info.classList.add("desc-top");
+                                let title = document.createElement("h1");
+                                title.innerText = chosen_card.title;
+
+                                let btn_selection = document.createElement("div");
+                                btn_selection.classList.add("button-selection");
+                                btn_selection.innerHTML = `
+                        <div class="watch">
+                            <h3>Play</h3>
+                            <svg fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                            </svg>
+                        </div>
+                        <div class="queue" onclick="ToggleWatchLater('${chosen_card.title}');">
+                            <h3>Watch Later</h3>
+                            <svg fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                            </svg>
+                        </div>`;
+
+                                top_info.append(title, btn_selection);
+
+                                let mid_info = document.createElement("div");
+                                mid_info.classList.add("desc-mid");
+                                mid_info.innerHTML = `<p>${chosen_card.description}</p>`;
+
+                                let bottom_info = document.createElement("div");
+                                bottom_info.classList.add("desc-bottom");
+
+                                let cast_slider = document.createElement("div");
+                                cast_slider.classList.add("cast");
+
+                                bottom_info.append(cast_slider);
+
+                                modal_content.append(
+                                    bg_image,
+                                    top_info,
+                                    mid_info,
+                                    bottom_info
+                                );
+                                modal.append(modal_content);
+
+                                document.body.append(modal);
+
+                                document.body.addEventListener("click", function(event) {
+                                    if (!event.target.classList.contains("modal-content")) {
+                                        //modal.remove();
+                                        console.log(1);
+                                    }
+                                });
+
+                                // Set the height for the modal image
+                                let total_width = document.getElementsByClassName(
+                                    "modal-content"
+                                )[0].clientWidth;
+                                let large_scale = (100 * total_width) / 1920;
+                                document.getElementsByClassName(
+                                    "desc-image"
+                                )[0].style.height = `${1080 * (large_scale / 100)}px`;
+
+                                // Set image for cast
+                                for (let c = 0; c < cast.length; c++) {
+                                    let cast_block = document.createElement("div");
+                                    cast_block.classList.add("cast-card");
+                                    cast_block.style.backgroundImage = `url("${cast[c].picture}")`;
+                                    cast_block.style.width = 100 / cast.length - 5 + "%";
+                                    cast_block.style.height = `calc(${
+                            document.getElementsByClassName("cast")[0]
+                                .clientWidth / cast.length
+                        }"px" - 5%)`;
+                                    cast_slider.append(cast_block);
+                                }
+                            }
+                        });
+
+                        button_container.append(button1, button2, button3, button4);
+
+                        overlay.append(title, description, button_container);
+                        card.append(overlay);
+                        if (j < num_cards) {
+                            carousels[i].insertBefore(
+                                card,
+                                carousels[i].children[carousels[i].children.length - 1]
+                            );
+                        } else {
+                            card.style.display = "none";
+                            carousels[i].insertBefore(
+                                card,
+                                carousels[i].children[carousels[i].children.length - 1]
+                            );
+                        }
+                    }
+                }
+            };
+
+            const CheckCards = () => {
+                let carousels = document.getElementsByClassName("card-carousel");
+
+                for (let i = 0; i < carousels.length; i++) {
+                    let carousel_width = carousels[i].clientWidth;
+
+                    let btn_width =
+                        carousels[i].getElementsByClassName("carousel-btn")[0].clientWidth +
+                        carousels[i].getElementsByClassName("carousel-btn")[1].clientWidth;
+
+                    let num_cards = num_cards_GLOBAL;
+                    let card_margin = 2;
+                    let initial_width = 1920;
+                    let initial_height = 1080;
+
+                    let scale =
+                        (100 *
+                            ((carousel_width - btn_width) / num_cards - card_margin * 2)) /
+                        initial_width;
+
+                    let cards = carousels[i].getElementsByClassName("card");
+
+                    for (let i = 0; i < cards.length; i++) {
+                        cards[i].style.width = initial_width * (scale / 100) + "px";
+                        cards[i].style.height = initial_height * (scale / 100) + "px";
+                        cards[i].style.margin = `0px ${card_margin}px`;
+                        cards[i].style.minWidth = initial_width * (scale / 100) + "px";
+                        cards[i].style.minHeight = initial_height * (scale / 100) + "px";
+                    }
+
+                    if (IsMobile()) {
+                        carousels[i].style.height =
+                            1.6 * (initial_height * (scale / 100)) + "px";
+                    } else {
+                        carousels[i].style.height = "auto";
+                    }
+                }
+            };
+
+            const AddCarouselButtons = () => {
+                let carousels = document.getElementsByClassName("card-carousel");
+                for (let i = 0; i < carousels.length; i++) {
+                    let btn1 = document.createElement("div");
+                    btn1.classList.add("carousel-btn");
+                    btn1.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16" onclick="Previous(this);">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        </svg>`;
+
+                    let btn2 = document.createElement("div");
+                    btn2.classList.add("carousel-btn");
+
+                    btn2.innerHTML = `<svg fill="currentColor" viewBox="0 0 16 16" onclick="Next(this);">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>`;
+
+                    carousels[i].append(btn1, btn2);
+                }
+            };
+
+            const ScrollFunction = () => {
+                let header = document.getElementsByClassName("header")[0];
+                if (document.documentElement.scrollTop > 1) {
+                    header.classList.add("header-active");
+                } else {
+                    header.classList.remove("header-active");
+                }
+            };
+
+            const MakeJumbotron = () => {
+                let height =
+                    window.innerHeight ||
+                    document.documentElement.clientHeight ||
+                    document.getElementsByTagName("body")[0].clientHeight;
+
+                document.getElementsByClassName("top")[0].style.height = `${height}px`;
+            };
+
+            let slide_index = 0;
+
+            const AutoSlideShow = () => {
+                let slide_area = document.getElementsByClassName("top")[0];
+                let container = slide_area.children[0];
+
+                container.classList.add("fadeIn");
+
+                let bg_display = [];
+                for (let i = 0; i < cards.length; i++) {
+                    if (cards[i].display_background) {
+                        bg_display.push(i);
+                    }
+                }
+
+                slide_index++;
+                if (slide_index > bg_display.length - 1) {
+                    slide_index = 0;
+                }
+
+                slide_area.style.backgroundImage = `url("${
+        cards[bg_display[slide_index]].display_background
+    }")`;
+                slide_area.getElementsByTagName("h1")[0].innerHTML =
+                    cards[bg_display[slide_index]].title;
+                slide_area.getElementsByTagName("p")[0].innerHTML =
+                    cards[bg_display[slide_index]].description;
+
+                container.classList.add("fadeOut");
+                setTimeout(AutoSlideShow, 2000);
+            };
+
+            const SmoothScroll = (id) => {
+                let element = document.getElementById(id);
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            };
+
+            const Next = (elem) => {
+                let carousel = elem.parentElement.parentElement;
+                let first_elem = carousel.children[1];
+                let next_elem;
+
+                for (let i = 0; i < carousel.children.length; i++) {
+                    if (carousel.children[i].style.display == "none") {
+                        next_elem = carousel.children[i];
+                        break;
+                    }
+                }
+
+                first_elem.style.display = "none";
+                first_elem.remove();
+                carousel.insertBefore(
+                    first_elem,
+                    carousel.children[carousel.children.length - 1]
+                );
+
+                next_elem.style.display = "flex";
+            };
+
+            const Previous = (elem) => {
+                let carousel = elem.parentElement.parentElement;
+                let last_display_item;
+                let prev_elem = carousel.children[carousel.children.length - 2];
+
+                for (let i = 0; i < carousel.children.length; i++) {
+                    if (
+                        carousel.children[i].style.display != "none" &&
+                        !carousel.children[i].classList.contains("carousel-btn")
+                    ) {
+                        last_display_item = carousel.children[i];
+                    }
+                }
+
+                last_display_item.style.display = "none";
+
+                carousel.insertBefore(prev_elem, carousel.children[1]);
+
+                prev_elem.style.display = "flex";
+            };
+
+            const ToggleWatchLater = (movie = "", activate = true) => {
+                let modal = document.getElementsByClassName("watch-later-modal")[0];
+
+                if (movie != "") {
+                    modal.getElementsByClassName("movie")[0].innerText = movie;
+                }
+
+                if (activate) {
+                    modal.style.display = "flex";
+                } else {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+    </body>
+
+</html>
